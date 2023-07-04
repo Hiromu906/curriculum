@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -15,3 +16,17 @@ class PostController extends Controller
     }
 }
 ?>
+=======
+use Illuminate\Http\Request;
+use App\Models\Post;
+
+class PostController extends Controller
+{
+    //
+    public function index(Post $post)//インポートしたPostをインスタンス化して$Postとして使用
+    {
+	    return $post->get(); //$postの中身を戻り値にする
+    }
+}
+
+>>>>>>> master
