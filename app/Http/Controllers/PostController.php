@@ -17,5 +17,12 @@ class PostController extends Controller
     {
         return view('posts.show')->with(['post' => $post]);
     }
+    public function create(Post $post)
+    {
+        return view('posts.create')-> with(['post'=> $post]);
+    }//create関数からcreate.blade.phpを呼び出し
+    public function store(Post $post){
+        return view('posts.store')-> with(['post'=> $post]);
+    }
 }
 ?>
